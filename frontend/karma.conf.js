@@ -17,10 +17,9 @@ module.exports = function(config) {
       'app/bower_components/angular-cookies/angular-cookies.js',
       'app/bower_components/angular-sanitize/angular-sanitize.js',
       'app/bower_components/angular-route/angular-route.js',
-      'app/scripts/*.js',
-      'app/scripts/**/*.js',
-      'test/mock/**/*.js',
-      'test/spec/**/*.js'
+      '.tmp/scripts/*.js',
+      '.tmp/scripts/**/*.js',
+      '.tmp/spec/**/*.js'
     ],
 
     // list of files / patterns to exclude
