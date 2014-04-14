@@ -12,6 +12,9 @@ angular
       .when '/personList',
         templateUrl: 'views/personlist.html'
         controller: 'PersonlistCtrl'
+        resolve: {
+            people: (Personservice) -> Personservice.getPeople()
+        }
       .otherwise
         redirectTo: '/personList'
 
