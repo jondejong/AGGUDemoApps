@@ -1,0 +1,11 @@
+$mycolor: #f33;
+$myothercolor: #ff3;
+
+.mystuff {
+  color: $mycolor;
+  .mylabel {
+    background-color: $myothercolor;
+  }
+
+}
+

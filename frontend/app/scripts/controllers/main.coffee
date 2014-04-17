@@ -5,6 +5,5 @@ angular.module('frontendApp')
     $scope.awesomeThings = [
       'HTML5 Boilerplate'
       'AngularJS'
-      'Karma',
-        'Jon'
+      'Karma'
     ]

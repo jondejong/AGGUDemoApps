@@ -1,7 +1,7 @@
 'use strict'
 
 angular.module('frontendApp')
-  .service 'Personservice', ($http, $q)->
+  .service 'Personservice', ($http)->
     people = {}
     getPeople = () ->
         promise = $http.get("http://localhost:8080/demo/person").then (response) ->
