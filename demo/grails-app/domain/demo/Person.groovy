@@ -2,7 +2,7 @@ package demo
 
 import grails.rest.Resource
 
-@Resource(uri='/person', formats = ['json'])
+//@Resource(uri='/person', formats = ['json'])
 class Person {
 
     String firstName

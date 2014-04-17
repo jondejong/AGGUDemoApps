@@ -14,5 +14,12 @@ angular.module('frontendApp')
         savePerson: (person) ->
             promise = $http.post("http://localhost:8080/demo/person", person)
             promise
+
+        search: (firstName) ->
+            promise = $http.get("http://localhost:8080/demo/person?firstName="+firstName).then (response) ->
+                console.log("Back from search", response)
+                people = response.data
+            promise
+
     }
 
