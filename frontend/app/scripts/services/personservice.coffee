@@ -21,5 +21,7 @@ angular.module('frontendApp')
                 people = response.data
             promise
 
+        update: (person) ->
+            $http.put("http://localhost:8080/demo/person/" + person.id, person)
     }
 

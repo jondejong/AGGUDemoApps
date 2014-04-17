@@ -27,6 +27,13 @@ angular.module('frontendApp').controller 'PersonlistCtrl', ($scope, $http, peopl
             $scope.people = data
         $scope.firstNameSearch = ''
 
+    $scope.update = (index)->
+        Personservice.update($scope.people[index]).then () ->
+            Personservice.getPeople().then (data) ->
+                $scope.people = data
+
+
+
 
 
 

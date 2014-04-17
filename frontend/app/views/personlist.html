@@ -11,9 +11,16 @@
     <div class="col-lg-1 header"><strong>Age</strong></div>
 </div>
 <div class="row" ng-repeat="person in people">
-    <div class="col-lg-2">{{person.firstName}}</div>
-    <div class="col-lg-2">{{person.lastName}}</div>
-    <div class="col-lg-1">{{person.age}}</div>
+    <div class="col-lg-2" ng-hide="inEdit">{{person.firstName}}</div>
+    <div class="col-lg-2" ng-show="inEdit"><input size="10" ng-model="person.firstName"/></div>
+    <div class="col-lg-2" ng-hide="inEdit">{{person.lastName}}</div>
+    <div class="col-lg-2" ng-show="inEdit"><input size="10" ng-model="person.lastName"/></div>
+    <div class="col-lg-1" ng-hide="inEdit">{{person.age}}</div>
+    <div class="col-lg-2" ng-show="inEdit"><input class="number" type="number" ng-model="person.age"/></div>
+
+    <div class="col-lg-1"><a ng-hide="inEdit"ng-click="inEdit = true">Edit</a></div>
+    <div class="col-lg-1"><a ng-show="inEdit"ng-click="update($index)">Save</a></div>
+    <div class="col-lg-1"><a ng-show="inEdit"ng-click="inEdit = false">Cancel</a></div>
 </div>
 <div ng-hide="addingNew"><a ng-click="addingNew = true">New</a></div>
 <div ng-show="addingNew">
