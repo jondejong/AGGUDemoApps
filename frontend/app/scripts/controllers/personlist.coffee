@@ -8,15 +8,15 @@ angular.module('frontendApp').controller 'PersonlistCtrl', ($scope, $http, peopl
 
     $scope.addPerson = ()->
         Personservice.savePerson($scope.newPerson).then () ->
-            Personservice.getPeople().then (people) ->
-                $scope.people = people
+            Personservice.getPeople().then (data) ->
+                $scope.people = data
 
         $scope.newPerson = {}
         $scope.addingNew = false
 
     $scope.search = ()->
-        Personservice.search($scope.firstNameSearch).then (people) ->
-            $scope.people = people
+        Personservice.search($scope.firstNameSearch).then (data) ->
+            $scope.people = data
 
     $scope.cancelAddNew = ()->
         $scope.newPerson = {}
